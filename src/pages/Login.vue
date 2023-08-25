@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+import router from "../router";
+
+function clickHandler() {
+  router.push("/main");
+}
+</script>
 
 <template>
   <div class="w-screen h-screen flex justify-start items-center bg-gray-900">
@@ -31,6 +37,7 @@
       <div class="w-full flex justify-center">
         <button
           class="border border-emerald-600 bg-emerald-500 text-white font-bold text-xl w-1/2 p-2 rounded-xl outline-none hover:bg-emerald-700 hover:shadow-xl shadow-emerald-900"
+          @click="clickHandler"
         >
           Sign In
         </button>

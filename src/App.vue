@@ -1,10 +1,7 @@
-<script setup>
-import Login from "./pages/Login.vue";
-import MainPage from "./pages/MainPage.vue";
-</script>
+<script setup></script>
 
 <template>
-  <MainPage />
+  <RouterView />
 </template>
 
 <style scoped>
