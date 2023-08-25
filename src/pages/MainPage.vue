@@ -69,8 +69,9 @@ function toggleSideBar() {
       </div>
       <div class="h-[calc(100vh-50px)] bg-gray-50 p-[20px]">
         <div
-          class="border border-gray-300 rounded-md p-[20px] h-full flex flex-col"
+          class="border border-gray-300 rounded-md p-[20px] h-full flex flex-col gap-10"
         >
+          <!-- history -->
           <div class="flex gap-2 h-1/3">
             <div class="w-1/3 h-full bg-emerald-300 rounded-3xl p-6">
               <p class="text-3xl text-white font-semibold">Title</p>
@@ -85,6 +86,8 @@ function toggleSideBar() {
               <p class="text-lg text-white font-normal">desc</p>
             </div>
           </div>
+
+          <!-- table? -->
           <div class="flex flex-col mt-6">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div
