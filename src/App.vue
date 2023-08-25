@@ -1,9 +1,10 @@
 <script setup>
-import Login from "./components/Login.vue";
+import Login from "./pages/Login.vue";
+import MainPage from "./pages/MainPage.vue";
 </script>
 
 <template>
-  <Login />
+  <MainPage />
 </template>
 
 <style scoped>

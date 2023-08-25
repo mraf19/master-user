@@ -10,10 +10,11 @@
           >Email</label
         >
         <input
-          class="border border-gray-950 text-gray-950 w-full rounded-md p-2 font-medium focus:bg-gray-200 transition duration-200"
+          class="border border-gray-950 text-gray-950 w-full rounded-md p-2 font-medium focus:bg-gray-200 transition duration-200 hover:shadow-lg focus:shadow-xl shadow-amber-900"
           type="email"
           name="email"
           id="email"
+          autocomplete="off"
         />
       </div>
       <div class="w-1/2 flex flex-col justify-center items-start mb-8">
@@ -21,7 +22,7 @@
           >Password</label
         >
         <input
-          class="border border-gray-950 text-gray-950 w-full rounded-md p-2 font-medium focus:bg-gray-200 transition duration-200"
+          class="border border-gray-950 text-gray-950 w-full rounded-md p-2 font-medium focus:bg-gray-200 transition duration-200 hover:shadow-lg focus:shadow-xl shadow-amber-900"
           type="password"
           name="password"
           id="password"
@@ -29,7 +30,7 @@
       </div>
       <div class="w-full flex justify-center">
         <button
-          class="border border-emerald-600 bg-emerald-500 text-white font-bold text-xl w-1/2 p-2 rounded-xl outline-none hover:bg-emerald-700"
+          class="border border-emerald-600 bg-emerald-500 text-white font-bold text-xl w-1/2 p-2 rounded-xl outline-none hover:bg-emerald-700 hover:shadow-xl shadow-emerald-900"
         >
           Sign In
         </button>
