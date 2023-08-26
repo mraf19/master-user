@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from "vue";
 
-const showDropDown = ref(false);
 const showSide = ref(true);
 
 function toggleSideBar() {
@@ -16,12 +15,12 @@ function toggleSideBar() {
       class="w-[400px] h-full bg-gray-200 text-white transition-all duration-300"
       v-show="showSide"
     >
-      <div class="h-[50px] bg-gray-900 flex justify-start items-center">
+      <div class="h-[50px] bg-slate-950 flex justify-start items-center">
         <div class="px-[20px]">
           <h3 class="font-bold md:text-xl sm:text-lg">Master User</h3>
         </div>
       </div>
-      <div class="h-[calc(100vh-50px)] bg-gray-800 py-[20px]">
+      <div class="h-[calc(100vh-50px)] bg-indigo-950 py-[20px]">
         <div
           class="flex flex-col justify-between h-full px-[20px] space-y-[10px]"
         >
@@ -49,6 +48,8 @@ function toggleSideBar() {
         </div>
       </div>
     </div>
+
+    <!-- Container -->
     <div class="w-full h-full bg-gray-400">
       <div
         class="h-[50px] bg-gray-100 flex items-center shadow-sm px-[20px] w-full py-[10px] z-10 border-b"
@@ -71,256 +72,112 @@ function toggleSideBar() {
         <div
           class="border border-gray-300 rounded-md p-[20px] h-full flex flex-col gap-10"
         >
+          <h1 class="text-5xl font-semibold text-gray-900">History</h1>
           <!-- history -->
-          <div class="flex gap-2 h-1/3">
-            <div class="w-1/3 h-full bg-emerald-300 rounded-3xl p-6">
-              <p class="text-3xl text-white font-semibold">Title</p>
-              <p class="text-lg text-white font-normal">desc</p>
+          <div class="flex gap-2 md:h-1/6 lg:h-1/3">
+            <div
+              class="w-1/3 h-full bg-green-400 rounded-3xl p-2 md:p-6 hover:shadow-lg hover:shadow-green-600 transition-all duration-200"
+            >
+              <p class="text-xl md:text-3xl text-white font-semibold lg:mb-16">
+                Mobile Game
+              </p>
+              <p class="text-sm md:text-xl lg:text-5xl text-white md:font-bold">
+                Rp. 10.379.800
+              </p>
             </div>
-            <div class="w-1/3 h-full bg-amber-300 rounded-3xl p-6">
-              <p class="text-3xl text-white font-semibold">Title</p>
-              <p class="text-lg text-white font-normal">desc</p>
+            <div
+              class="w-1/3 h-full bg-amber-400 rounded-3xl p-2 md:p-6 hover:shadow-lg hover:shadow-amber-600 transition-all duration-200"
+            >
+              <p class="text-xl md:text-3xl text-white font-semibold lg:mb-16">
+                Console Game
+              </p>
+              <p class="text-sm md:text-xl lg:text-5xl text-white md:font-bold">
+                Rp. 19.654.200
+              </p>
             </div>
-            <div class="w-1/3 h-full bg-indigo-300 rounded-3xl p-6">
-              <p class="text-3xl text-white font-semibold">Title</p>
-              <p class="text-lg text-white font-normal">desc</p>
+            <div
+              class="w-1/3 h-full bg-cyan-400 rounded-3xl p-2 md:p-6 hover:shadow-lg hover:shadow-cyan-600 transition-all duration-200"
+            >
+              <p class="text-xl md:text-3xl text-white font-semibold lg:mb-16">
+                PC Game
+              </p>
+              <p class="text-sm md:text-xl lg:text-5xl text-white md:font-bold">
+                Rp. 50.899.000
+              </p>
             </div>
           </div>
 
-          <!-- table? -->
+          <!-- table  -->
           <div class="flex flex-col mt-6">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div
                 class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
               >
                 <div class="shadow overflow-hidden sm:rounded-lg">
-                  <table class="min-w-full text-sm text-gray-700">
-                    <thead class="bg-emerald-600 text-xs uppercase font-medium">
+                  <table class="min-w-full text-sm font-bold text-black">
+                    <thead class="bg-slate-300 text-xs uppercase font-medium">
                       <tr>
                         <th></th>
                         <th
                           scope="col"
                           class="px-6 py-3 text-left tracking-wider"
                         >
-                          Club
+                          Game
                         </th>
                         <th
                           scope="col"
                           class="px-6 py-3 text-left tracking-wider"
                         >
-                          MP
+                          Category
                         </th>
                         <th
                           scope="col"
                           class="px-6 py-3 text-left tracking-wider"
                         >
-                          W
+                          Item
                         </th>
                         <th
                           scope="col"
                           class="px-6 py-3 text-left tracking-wider"
                         >
-                          D
-                        </th>
-                        <th
-                          scope="col"
-                          class="px-6 py-3 text-left tracking-wider"
-                        >
-                          L
-                        </th>
-                        <th
-                          scope="col"
-                          class="px-6 py-3 text-left tracking-wider"
-                        >
-                          GF
-                        </th>
-                        <th
-                          scope="col"
-                          class="px-6 py-3 text-left tracking-wider"
-                        >
-                          GA
-                        </th>
-                        <th
-                          scope="col"
-                          class="px-6 py-3 text-left tracking-wider"
-                        >
-                          GD
-                        </th>
-                        <th
-                          scope="col"
-                          class="px-6 py-3 text-left tracking-wider"
-                        >
-                          Pts
-                        </th>
-                        <th
-                          scope="col"
-                          class="px-6 py-3 text-left tracking-wider"
-                        >
-                          Last 5
+                          Price
                         </th>
                       </tr>
                     </thead>
-                    <tbody class="bg-white">
-                      <tr class="bg-emerald-400 bg-opacity-50">
+                    <tbody class="bg-slate-200">
+                      <tr class="bg-indigo-950 bg-opacity-90">
                         <td class="pl-4">1</td>
                         <td class="flex px-6 py-4 whitespace-nowrap">
-                          <img
-                            class="w-5"
-                            src="https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png"
-                            alt=""
-                          />
-                          <span class="ml-2 font-medium">Man United</span>
+                          <span class="ml-2 font-medium">Mobile Legend</span>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap">17</td>
-                        <td class="px-6 py-4 whitespace-nowrap">11</td>
-                        <td class="px-6 py-4 whitespace-nowrap">3</td>
-                        <td class="px-6 py-4 whitespace-nowrap">3</td>
-                        <td class="px-6 py-4 whitespace-nowrap">34</td>
-                        <td class="px-6 py-4 whitespace-nowrap">24</td>
-                        <td class="px-6 py-4 whitespace-nowrap">10</td>
-                        <td class="px-6 py-4 whitespace-nowrap">34</td>
-                        <td class="flex px-6 py-4 whitespace-nowrap">
-                          <svg
-                            class="w-4 fill-current text-green-600"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          <svg
-                            class="w-4 fill-current text-green-600"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          <svg
-                            class="w-4 fill-current text-green-600"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          <svg
-                            class="w-4 fill-current text-gray-400"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          <svg
-                            class="w-4 fill-current text-green-600"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
+                        <td class="px-6 py-4 whitespace-nowrap">Mobile</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Diamond</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          Rp. 10.379.800
                         </td>
                       </tr>
                       <tr>
                         <td class="pl-4">2</td>
                         <td class="flex px-6 py-4 whitespace-nowrap">
-                          <img
-                            class="w-5"
-                            src="https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png"
-                            alt=""
-                          />
-                          <span class="ml-2 font-medium">Liverpool</span>
+                          <span class="ml-2 font-medium">DOTA 2</span>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap">17</td>
-                        <td class="px-6 py-4 whitespace-nowrap">9</td>
-                        <td class="px-6 py-4 whitespace-nowrap">6</td>
-                        <td class="px-6 py-4 whitespace-nowrap">2</td>
-                        <td class="px-6 py-4 whitespace-nowrap">37</td>
-                        <td class="px-6 py-4 whitespace-nowrap">21</td>
-                        <td class="px-6 py-4 whitespace-nowrap">16</td>
-                        <td class="px-6 py-4 whitespace-nowrap">33</td>
+                        <td class="px-6 py-4 whitespace-nowrap">PC</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          Steam Wallet
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          Rp. 50.899.000
+                        </td>
+                      </tr>
+                      <tr class="bg-indigo-950 bg-opacity-90">
+                        <td class="pl-4">3</td>
                         <td class="flex px-6 py-4 whitespace-nowrap">
-                          <svg
-                            class="w-4 fill-current text-red-500"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          <svg
-                            class="w-4 fill-current text-gray-400"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          <svg
-                            class="w-4 fill-current text-gray-400"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          <svg
-                            class="w-4 fill-current text-green-600"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          <svg
-                            class="w-4 fill-current text-green-600"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
+                          <span class="ml-2 font-medium">PlayStation</span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">Console</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Game</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          Rp. 19.654.200
                         </td>
                       </tr>
                     </tbody>
@@ -332,7 +189,6 @@ function toggleSideBar() {
         </div>
       </div>
     </div>
-    <!-- Main  -->
   </div>
 </template>
 
